@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《美好的每一天～不连续存在～》// 水上由岐</title>
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+  <div class="boot" id="boot"><div>《美好的每一天～不连续存在～》</div><strong>水上由岐</strong><span>连接晴空下的不连续存在...</span></div>
+  <main class="desktop" id="desktop">
+    <div class="wire wire-a"></div><div class="wire wire-b"></div>
+
+    <section class="window portrait" data-window="eyes" style="--x:0%;--y:2%;--w:34%;--h:70%">
+      <header><span>《美好的每一天～不连续存在～》 // 水上由岐</span><button aria-label="close">×</button></header>
+      <div class="crt-image hero-image"></div>
+    </section>
+
+    <section class="window player" data-window="player" style="--x:34.5%;--y:0%;--w:34%;--h:24%">
+      <header><span>NOW PLAYING</span><button aria-label="close">×</button></header>
+      <div class="player-top"><div class="album"></div><div><h1>Duvet <small>(Slowed Down Version)</small></h1><p>bôa</p></div></div>
+      <canvas id="spectrum"></canvas>
+      <div class="track"><span>▶ Playing</span><b>1. Duvet (Slowed Down Version)</b><time>0:32</time></div>
+    </section>
+
+    <section class="window calendar" data-window="calendar" style="--x:69%;--y:0%;--w:31%;--h:24%">
+      <header><span>SCREEN PRINTED CALENDAR</span><button aria-label="close">×</button></header>
+      <div class="calendar-grid"><div class="flip"><span id="hour">10</span><strong id="minute">32</strong><em id="second">33</em></div><div class="month"><b id="day">19</b><strong id="month">March</strong><div class="dates" id="dates"></div></div></div>
+      <nav><button>STOP</button><button>◀</button><button>▶</button><button>▸|</button></nav>
+    </section>
+
+    <section class="window console" data-window="console" style="--x:34.5%;--y:24.5%;--w:35%;--h:48%">
+      <header><span>SYSTEM CONSOLE</span><button aria-label="close">×</button></header>
+      <div class="console-head"><span>TIME</span><span>ID</span><span>TASK</span></div>
+      <div class="console-body"><div class="eye-card"><h3>EYES</h3><div class="eye-image"></div></div><div class="service"><b>Local Service</b><div id="logs"></div><canvas id="network"></canvas></div></div>
+      <pre class="process" id="process"></pre>
+    </section>
+
+    <section class="window numbers" data-window="numbers" style="--x:69.5%;--y:24.5%;--w:17.5%;--h:30%">
+      <header><span>水上由岐 // NUMBERS</span><button aria-label="close">×</button></header>
+      <div class="number-grid" id="numbers"></div>
+    </section>
+
+    <section class="window visual" data-window="visual" style="--x:87.5%;--y:27%;--w:12.5%;--h:27%">
+      <header><span>OBJECT</span><button aria-label="close">×</button></header>
+      <div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="window large-avatar" data-window="avatar" style="--x:69.5%;--y:54.5%;--w:30.5%;--h:45.5%">
+      <header><span>水上由岐</span><button aria-label="close">×</button></header>
+      <div class="avatar-image"></div><div class="memory"><span>Memory Allocation</span><div class="pie"></div></div>
+    </section>
+
+    <section class="window countdown" data-window="countdown" style="--x:0%;--y:73%;--w:22%;--h:27%">
+      <header><span>COUNTDOWN</span><button aria-label="close">×</button></header>
+      <div class="counter"><span>水上由岐</span><strong id="countdown">01w 02d 20h 27m 26s</strong><span>Birthday</span><strong>33w 02d 20h 27m 27s</strong></div>
+    </section>
+
+    <section class="window signal" data-window="signal" style="--x:22.5%;--y:73%;--w:11.5%;--h:14%">
+      <header><span>Wired Signal Strength</span><button aria-label="close">×</button></header>
+      <div class="bars" id="bars"></div>
+    </section>
+
+    <section class="window reset" data-window="reset" style="--x:22.5%;--y:87.5%;--w:11.5%;--h:12.5%">
+      <header><span>NEXT RESET</span><button aria-label="close">×</button></header>
+      <p>Next Reset<br><strong>00:00:00</strong></p>
+    </section>
+
+    <section class="window world" data-window="world" style="--x:34.5%;--y:73%;--w:35%;--h:27%">
+      <header><span>WORLD CLOCK</span><button aria-label="close">×</button></header>
+      <div class="clocks"><div><b>BOG</b><strong id="bog">10:32:33</strong><small>19 March</small></div><div class="globe"></div><div><b>MAT</b><strong id="mat">10:32:33</strong><small>19 March</small></div></div>
+    </section>
+
+    <aside class="dock" id="dock"><button data-restore="eyes">◉</button><button data-restore="player">♫</button><button data-restore="console">⌘</button><button data-restore="calendar">▦</button><button id="edit-toggle" title="编辑页面">✎</button><button id="fullscreen">◇</button></aside>
+    <aside class="editor" id="editor">
+      <header><b>页面编辑器</b><button id="editor-close">×</button></header>
+      <div class="selected-info">当前：<strong id="selected-name">未选择窗口</strong></div>
+      <label>局部缩放 <input id="window-zoom" type="range" min="50" max="180" value="100"><output id="zoom-output">100%</output></label>
+      <div class="editor-grid">
+        <button id="add-text">＋文字窗口</button><button id="add-image">＋图片窗口</button>
+        <button id="duplicate-window">复制窗口</button><button id="delete-window">删除窗口</button>
+        <button id="replace-image">替换局部图片</button><button id="edit-content">编辑文字内容</button>
+        <button id="save-layout">保存布局</button><button id="reset-layout">恢复默认</button>
+      </div>
+      <input id="image-picker" type="file" accept="image/*" hidden>
+      <p>编辑模式下：拖动标题栏移动；拖动窗口右下角改变宽高；点击窗口后可缩放、复制或删除。</p>
+    </aside>
+    <div class="scanlines"></div><div class="noise"></div><div class="vignette"></div>
+  </main>
+  <script src="script.js?v=8"></script>
+</body>
+</html>
